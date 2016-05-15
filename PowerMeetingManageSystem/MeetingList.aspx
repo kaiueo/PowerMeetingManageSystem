@@ -30,8 +30,11 @@
 <div class="row clearfix">
     <div class="col-md-2 column"></div>
     <div class="col-md-6 column" runat="server">
+       <br /><br /><br />
+        <asp:HyperLink class="btn btn-primary" ID="addMeeting" runat="server">新建会议</asp:HyperLink>
+        <br /><br />
        
-        <asp:Table ID="meetingListTable" runat="server" BorderStyle="None"  >
+        <asp:Table CssClass ="table" ID="meetingListTable" runat="server" BorderStyle="None"  >
         </asp:Table>
        
     </div>

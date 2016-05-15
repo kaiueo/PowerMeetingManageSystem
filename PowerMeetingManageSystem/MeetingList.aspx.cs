@@ -13,6 +13,8 @@ namespace PowerMeetingManageSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            addMeeting.NavigateUrl = "ManageMeeting.aspx?type=add";
+            addMeeting.Font.Underline = false;
             string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
