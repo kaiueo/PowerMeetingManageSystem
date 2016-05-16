@@ -106,25 +106,25 @@ namespace PowerMeetingManageSystem
             string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
-            SqlCommand addMeeting = new SqlCommand();
-            addMeeting.Connection = sqlConnection;
-            addMeeting.CommandText = "update conference set conf_name = @name, conf_add = @add, conf_time = @time, conf_subject = @sub, conf_organization = @org where conf_id = " + meetingId;
+            SqlCommand updateMeeting = new SqlCommand();
+            updateMeeting.Connection = sqlConnection;
+            updateMeeting.CommandText = "update conference set conf_name = @name, conf_add = @add, conf_time = @time, conf_subject = @sub, conf_organization = @org where conf_id = " + meetingId;
             string conf_name = Request.Form["name"];
             string conf_add = Request.Form["address"];
             string conf_time = Request.Form["time"];
             string conf_sub = Request.Form["sub"];
             string conf_organization = Request.Form["organization"];
-            addMeeting.Parameters.Add("@name", SqlDbType.VarChar).Value = conf_name;
-            addMeeting.Parameters.Add("@add", SqlDbType.VarChar).Value = conf_add;
-            addMeeting.Parameters.Add("@time", SqlDbType.DateTime).Value = conf_time;
-            addMeeting.Parameters.Add("@sub", SqlDbType.VarChar).Value = conf_sub;
-            addMeeting.Parameters.Add("@org", SqlDbType.VarChar).Value = conf_organization;
+            updateMeeting.Parameters.Add("@name", SqlDbType.VarChar).Value = conf_name;
+            updateMeeting.Parameters.Add("@add", SqlDbType.VarChar).Value = conf_add;
+            updateMeeting.Parameters.Add("@time", SqlDbType.DateTime).Value = conf_time;
+            updateMeeting.Parameters.Add("@sub", SqlDbType.VarChar).Value = conf_sub;
+            updateMeeting.Parameters.Add("@org", SqlDbType.VarChar).Value = conf_organization;
 
 
 
             try
             {
-                int a = addMeeting.ExecuteNonQuery();
+                int a = updateMeeting.ExecuteNonQuery();
                 sqlConnection.Close();
                 Response.Write("<script>alert('修改成功!');window.location.href='MeetingHome.aspx?id="+meetingId+"'</script>");
                 //Response.Redirect("MeetingHome.aspx?id=" + meetingId);

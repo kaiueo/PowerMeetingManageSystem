@@ -34,7 +34,7 @@
         <asp:HyperLink class="btn btn-primary" ID="addMeeting" runat="server">新建会议</asp:HyperLink>
         <br /><br />
        
-        <asp:Table CssClass ="table" ID="meetingListTable" runat="server" BorderStyle="None"  >
+        <asp:Table CssClass ="table table-striped table-hover" ID="meetingListTable" runat="server" BorderStyle="None"  >
         </asp:Table>
        
     </div>

@@ -43,6 +43,7 @@ namespace PowerMeetingManageSystem
 
                     editMeeting.NavigateUrl = "ManageMeeting.aspx?type=edit&id=" + meetingId;
                     deleteMeeting.NavigateUrl = "ManageMeeting.aspx?type=del&id=" + meetingId;
+                    manageConfConv.NavigateUrl = "ManageConventioner.aspx?id=" + meetingId;
                     
                     moreOption.Visible = true;
                 }

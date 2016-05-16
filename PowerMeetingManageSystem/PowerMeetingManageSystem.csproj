@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="login.aspx" />
+    <Content Include="ManageConventioner.aspx" />
     <Content Include="ManageMeeting.aspx" />
     <Content Include="MeetingHome.aspx" />
     <Content Include="MeetingList.aspx" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageConventioner.aspx.cs">
+      <DependentUpon>ManageConventioner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageConventioner.aspx.designer.cs">
+      <DependentUpon>ManageConventioner.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageMeeting.aspx.cs">
       <DependentUpon>ManageMeeting.aspx</DependentUpon>
