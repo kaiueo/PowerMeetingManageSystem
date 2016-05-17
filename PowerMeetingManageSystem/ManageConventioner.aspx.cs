@@ -15,9 +15,11 @@ namespace PowerMeetingManageSystem
         string meetingId;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             meetingId = Request.QueryString["id"];
             if (meetingId != null)
             {
+                returnMeetingHome.NavigateUrl = "MeetingHome.aspx?id=" + meetingId;
                 string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();

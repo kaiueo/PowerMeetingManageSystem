@@ -94,9 +94,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddEditQuestions.aspx" />
+    <Content Include="FillFeedback.aspx" />
     <Content Include="login.aspx" />
     <Content Include="ManageConventioner.aspx" />
     <Content Include="ManageMeeting.aspx" />
+    <Content Include="ManageQuestions.aspx" />
     <Content Include="MeetingHome.aspx" />
     <Content Include="MeetingList.aspx" />
     <Content Include="packages.config" />
@@ -112,11 +115,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="PreviewFeedback.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="ShowMeetingAttendStatus.aspx" />
+    <Content Include="ViewFeedbackResult.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditQuestions.aspx.cs">
+      <DependentUpon>AddEditQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEditQuestions.aspx.designer.cs">
+      <DependentUpon>AddEditQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FillFeedback.aspx.cs">
+      <DependentUpon>FillFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FillFeedback.aspx.designer.cs">
+      <DependentUpon>FillFeedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -141,6 +161,13 @@
     <Compile Include="ManageMeeting.aspx.designer.cs">
       <DependentUpon>ManageMeeting.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ManageQuestions.aspx.cs">
+      <DependentUpon>ManageQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageQuestions.aspx.designer.cs">
+      <DependentUpon>ManageQuestions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MeetingHome.aspx.cs">
       <DependentUpon>MeetingHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,7 +182,28 @@
     <Compile Include="MeetingList.aspx.designer.cs">
       <DependentUpon>MeetingList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PreviewFeedback.aspx.cs">
+      <DependentUpon>PreviewFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreviewFeedback.aspx.designer.cs">
+      <DependentUpon>PreviewFeedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowMeetingAttendStatus.aspx.cs">
+      <DependentUpon>ShowMeetingAttendStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowMeetingAttendStatus.aspx.designer.cs">
+      <DependentUpon>ShowMeetingAttendStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFeedbackResult.aspx.cs">
+      <DependentUpon>ViewFeedbackResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewFeedbackResult.aspx.designer.cs">
+      <DependentUpon>ViewFeedbackResult.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

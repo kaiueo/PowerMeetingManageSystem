@@ -10,7 +10,7 @@
 namespace PowerMeetingManageSystem {
     
     
-    public partial class ManageConventioner {
+    public partial class ShowMeetingAttendStatus {
         
         /// <summary>
         /// form1 控件。
@@ -22,40 +22,22 @@ namespace PowerMeetingManageSystem {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// leftSelect 控件。
+        /// d1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect leftSelect;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl d1;
         
         /// <summary>
-        /// addButton 控件。
+        /// statusTable 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addButton;
-        
-        /// <summary>
-        /// delButton 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button delButton;
-        
-        /// <summary>
-        /// rightSelect 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect rightSelect;
+        protected global::System.Web.UI.HtmlControls.HtmlTable statusTable;
         
         /// <summary>
         /// returnMeetingHome 控件。

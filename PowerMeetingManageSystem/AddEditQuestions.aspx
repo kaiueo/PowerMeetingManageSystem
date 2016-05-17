@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MeetingHome.aspx.cs" Inherits="PowerMeetingManageSystem.MeetingHome" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddEditQuestions.aspx.cs" Inherits="PowerMeetingManageSystem.AddEditQuestions" %>
 
 <!DOCTYPE html>
 
@@ -31,39 +31,37 @@
     <div class="col-md-2 column"></div>
     <div class="col-md-6 column">
        <form role="form" runat="server">
-           <div class="form-group" id="viewForm">
-          <label>会议名称:</label>
-          <label  class="form-control" id="conf_name" runat="server" />
+           
+        <div class="form-group" id="editForm">
+          <label>问题内容:</label>
+          <input class="form-control" id="content" runat="server" />
         </div>
         <div class="form-group">
-          <label>会议主题:</label>
-          <label  class="form-control" id="conf_subject" runat="server" />
+          <label>选项A:</label>
+          <input  class="form-control" id="A" runat="server" />
         </div>
            <div class="form-group">
-          <label>会议时间:</label>
-          <label  class="form-control" id="conf_time" runat="server" />
+          <label>选项B:</label>
+          <input  class="form-control" id="B" runat="server" />
         </div>
            <div class="form-group">
-          <label>会议地点:</label>
-          <label  class="form-control" id="conf_add" runat="server" />
+          <label>选项C:</label>
+          <input  class="form-control" id="C" runat="server" />
         </div>
            <div class="form-group">
-          <label>主办方:</label>
-          <label  class="form-control" id="conf_organization" runat="server" />
+          <label>选项D:</label>
+          <input  class="form-control" id="D" runat="server" />
         </div>
+           <div class="form-group" runat="server" id="add">
         
-
-           <br /><br />
-           <div class="form-group" runat="server" id="moreOption">
-                <asp:HyperLink class="btn" ID="editMeeting" runat="server">编辑</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
-               <asp:HyperLink class="btn" ID="deleteMeeting" runat="server">删除</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
-               
-           
-               <asp:HyperLink class="btn" ID="viewConfInf" runat="server">查看参会信息</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
-               <asp:HyperLink class="btn" ID="manageConfConv" runat="server">管理参会人员</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
-               <asp:HyperLink class="btn" ID="manageFeedback" runat="server">管理反馈表问题</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
-               <asp:HyperLink class="btn" ID="viewFeedback" runat="server">查看反馈结果</asp:HyperLink>
-           </div>
+        <asp:button type="submit" ID="addButton" runat="server" class="btn btn-default" text="保存" OnClick="addButton_Click" />
+         <asp:button type="submit" ID ="cancelButton1" runat="server" class="btn btn-default" text="取消" OnClick="cancelButton1_Click"/>
+               </div>
+           <div class="form-group" runat="server" id="edit">
+        
+        <asp:button type="submit" ID="saveButton" runat="server" class="btn btn-default" text="保存" OnClick="saveButton_Click" />
+         <asp:button type="submit" ID ="cancelButton2" runat="server" class="btn btn-default" text="取消" OnClick="cancelButton2_Click"/>
+               </div>
            
       </form>
        

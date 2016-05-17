@@ -58,7 +58,19 @@ namespace PowerMeetingManageSystem
             }
             else if (type == "del")
             {
-                //TODO
+                if (meetingId != null)
+                {
+                    string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
+                    SqlConnection sqlConnection = new SqlConnection(connectionString);
+                    sqlConnection.Open();
+                    SqlCommand deleteMeeting = new SqlCommand();
+                    deleteMeeting.Connection = sqlConnection;
+                    deleteMeeting.CommandText = "delete from feedback where question_conf_id = @conf_id;delete from signform where sign_conf_id = @conf_id;delete from conference where conf_id = @conf_id;";
+                    deleteMeeting.Parameters.Add("@conf_id", SqlDbType.Int).Value = meetingId;
+                    deleteMeeting.ExecuteNonQuery();
+                    Response.Write("<script>alert('删除成功!');window.location.href='MeetingList.aspx'</script>");
+
+                }
 
             }
                 
