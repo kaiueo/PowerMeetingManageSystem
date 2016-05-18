@@ -97,7 +97,7 @@
     <Content Include="AddEditQuestions.aspx" />
     <Content Include="ConfigMail.aspx" />
     <Content Include="FillFeedback.aspx" />
-    <Content Include="login.aspx" />
+    <Content Include="SiteLogin.aspx" />
     <Content Include="ManageConventioner.aspx" />
     <Content Include="ManageMeeting.aspx" />
     <Content Include="ManageQuestions.aspx" />
@@ -150,12 +150,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="SiteLogin.aspx.cs">
+      <DependentUpon>SiteLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="SiteLogin.aspx.designer.cs">
+      <DependentUpon>SiteLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageConventioner.aspx.cs">
       <DependentUpon>ManageConventioner.aspx</DependentUpon>
@@ -232,6 +232,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="css\" />
+    <Folder Include="fonts\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

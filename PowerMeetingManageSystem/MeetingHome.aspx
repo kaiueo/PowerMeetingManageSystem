@@ -55,8 +55,8 @@
                     </div>
 
 
-                    <br />
-                    <br />
+
+
                     <div class="form-group" runat="server" id="moreOption">
                         <asp:HyperLink class="btn" ID="editMeeting" runat="server">编辑</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
                <asp:HyperLink class="btn" ID="deleteMeeting" runat="server">删除</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -66,6 +66,10 @@
                <asp:HyperLink class="btn" ID="manageConfConv" runat="server">管理参会人员</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
                <asp:HyperLink class="btn" ID="manageFeedback" runat="server">管理反馈表问题</asp:HyperLink>&nbsp;&nbsp;&nbsp;&nbsp;
                <asp:HyperLink class="btn" ID="viewFeedback" runat="server">查看反馈结果</asp:HyperLink>
+                    </div>
+
+                    <div class="form-group">
+                            <asp:HyperLink class="btn btn-primary" ID="returnMeetingList" runat="server">返回</asp:HyperLink>
                     </div>
 
                 </form>

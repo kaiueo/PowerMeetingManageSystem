@@ -17,8 +17,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="MeetingList.aspx">Meeting List</a></li>
-                    <li class="active"><a href="#">Meeting Home</a></li>
+                    <li class="active"><a href="MeetingList.aspx">Meeting List</a></li>
+                    <li><a href="#">Meeting Home</a></li>
                     <li><a href="ConfigMail.aspx">邮件及网站配置</a></li>
 
                 </ul>

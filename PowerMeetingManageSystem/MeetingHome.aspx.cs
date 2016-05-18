@@ -13,6 +13,7 @@ namespace PowerMeetingManageSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            returnMeetingList.NavigateUrl = "MeetingList.aspx";
             moreOption.Visible = false;
             string meetingId = Request.QueryString["id"];
 
