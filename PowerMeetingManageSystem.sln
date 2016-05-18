@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerMeetingManageSystem", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerMeetingManageSystem.Tests", "PowerMeetingManageSystem.Tests\PowerMeetingManageSystem.Tests.csproj", "{7EA11EB2-506C-4A96-8898-29B215F76EB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerMeetingManageSystemSignInClient", "PowerMeetingManageSystemSignInClient\PowerMeetingManageSystemSignInClient.csproj", "{23D916F0-CAB0-4067-9DD8-FE3C32698EDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7EA11EB2-506C-4A96-8898-29B215F76EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EA11EB2-506C-4A96-8898-29B215F76EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EA11EB2-506C-4A96-8898-29B215F76EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D916F0-CAB0-4067-9DD8-FE3C32698EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D916F0-CAB0-4067-9DD8-FE3C32698EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D916F0-CAB0-4067-9DD8-FE3C32698EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D916F0-CAB0-4067-9DD8-FE3C32698EDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
