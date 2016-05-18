@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>管理问题</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 </head>
 <body>
@@ -18,11 +18,12 @@
     <ul class="nav navbar-nav">
       <li> <a href="MeetingList.aspx">Meeting List</a></li>
       <li class="active"> <a href="#">Meeting Home</a></li>
+      <li> <a href="ConfigMail.aspx">邮件及网站配置</a></li>
       
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
-      <li> <a href="#">邮件及网站配置</a></li>
+      <li> <a href="SignOut.aspx">登出</a></li>
     </ul>
   </div>
 </nav>

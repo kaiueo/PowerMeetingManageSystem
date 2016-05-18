@@ -38,10 +38,10 @@ namespace PowerMeetingManageSystem
                 hl1.NavigateUrl = "MeetingHome.aspx?id=" + result[0].ToString();
                 hl1.Font.Underline = false; //取消超链接中的下划线
                 hl2.Text = "发送参会通知";
-                hl2.NavigateUrl = "SendMail.aspx?id=" + result[0].ToString();
+                hl2.NavigateUrl = "SendMail.aspx?id=" + result[0].ToString()+"&type=notice";
                 hl2.Font.Underline = false;
                 hl3.Text = "&nbsp;发送填写反馈表通知";
-                hl3.NavigateUrl = "SendMail.aspx?id=" + result[0].ToString();
+                hl3.NavigateUrl = "SendMail.aspx?id=" + result[0].ToString() + "&type=feedback";
                 hl3.Font.Underline = false;
                 tc1.Controls.Add(hl1);
                 tc2.Text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";

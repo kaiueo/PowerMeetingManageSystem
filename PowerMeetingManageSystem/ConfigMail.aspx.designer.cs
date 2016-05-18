@@ -10,78 +10,60 @@
 namespace PowerMeetingManageSystem {
     
     
-    public partial class ManageQuestions {
+    public partial class ConfigMail {
         
         /// <summary>
-        /// form1 控件。
+        /// smtpServer 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox smtpServer;
         
         /// <summary>
-        /// d1 控件。
+        /// emailUser 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl d1;
+        protected global::System.Web.UI.WebControls.TextBox emailUser;
         
         /// <summary>
-        /// addQuestion 控件。
+        /// emailPassword 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink addQuestion;
+        protected global::System.Web.UI.WebControls.TextBox emailPassword;
         
         /// <summary>
-        /// previewFeedbackQuestions 控件。
+        /// saveEmailButton 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink previewFeedbackQuestions;
+        protected global::System.Web.UI.WebControls.Button saveEmailButton;
         
         /// <summary>
-        /// generateFeedbackAddress 控件。
+        /// webURL 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button generateFeedbackAddress;
+        protected global::System.Web.UI.WebControls.TextBox webURL;
         
         /// <summary>
-        /// questionsTable 控件。
+        /// saveURLButton 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable questionsTable;
-        
-        /// <summary>
-        /// feedbackAddDiv 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl feedbackAddDiv;
-        
-        /// <summary>
-        /// returnMeetingHome 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink returnMeetingHome;
+        protected global::System.Web.UI.WebControls.Button saveURLButton;
     }
 }

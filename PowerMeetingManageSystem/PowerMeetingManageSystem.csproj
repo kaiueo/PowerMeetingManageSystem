@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddEditQuestions.aspx" />
+    <Content Include="ConfigMail.aspx" />
     <Content Include="FillFeedback.aspx" />
     <Content Include="login.aspx" />
     <Content Include="ManageConventioner.aspx" />
@@ -118,7 +119,9 @@
     <Content Include="PreviewFeedback.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="SendMail.aspx" />
     <Content Include="ShowMeetingAttendStatus.aspx" />
+    <Content Include="SignOut.aspx" />
     <Content Include="ViewFeedbackResult.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -129,6 +132,13 @@
     </Compile>
     <Compile Include="AddEditQuestions.aspx.designer.cs">
       <DependentUpon>AddEditQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigMail.aspx.cs">
+      <DependentUpon>ConfigMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfigMail.aspx.designer.cs">
+      <DependentUpon>ConfigMail.aspx</DependentUpon>
     </Compile>
     <Compile Include="FillFeedback.aspx.cs">
       <DependentUpon>FillFeedback.aspx</DependentUpon>
@@ -190,12 +200,26 @@
       <DependentUpon>PreviewFeedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMail.aspx.cs">
+      <DependentUpon>SendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendMail.aspx.designer.cs">
+      <DependentUpon>SendMail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ShowMeetingAttendStatus.aspx.cs">
       <DependentUpon>ShowMeetingAttendStatus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ShowMeetingAttendStatus.aspx.designer.cs">
       <DependentUpon>ShowMeetingAttendStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewFeedbackResult.aspx.cs">
       <DependentUpon>ViewFeedbackResult.aspx</DependentUpon>

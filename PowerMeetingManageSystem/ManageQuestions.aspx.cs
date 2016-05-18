@@ -30,13 +30,13 @@ namespace PowerMeetingManageSystem
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            feedbackAddDiv.Visible = false;
             meetingId = Request.QueryString["id"];
             if (meetingId != null)
             {
                 returnMeetingHome.NavigateUrl = "MeetingHome.aspx?id=" + meetingId;
                 addQuestion.NavigateUrl = "AddEditQuestions.aspx?id=" + meetingId + "&&questionId=0";
                 previewFeedbackQuestions.NavigateUrl = "PreviewFeedback.aspx?id=" + meetingId;
-                feedbackAddress.NavigateUrl = "FillFeedback.aspx?id=" + meetingId;
 
                 string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
                 SqlConnection sqlConnection = new SqlConnection(connectionString);
@@ -79,5 +79,24 @@ namespace PowerMeetingManageSystem
 
         }
 
+        protected void generateFeedbackAddress_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            SqlCommand getWebAddress = new SqlCommand();
+            getWebAddress.Connection = sqlConnection;
+            getWebAddress.CommandText = "select web_address from configuration where config_id = 1";
+            SqlDataReader webAddReader = getWebAddress.ExecuteReader();
+            webAddReader.Read();
+            string webAddress = webAddReader[0].ToString();
+            string feedbackAddress = webAddress + "/FillFeedback.aspx?id=" + meetingId;
+            HyperLink hl = new HyperLink();
+            hl.Text = feedbackAddress;
+            hl.NavigateUrl = feedbackAddress;
+            feedbackAddDiv.Controls.Add(hl);
+            feedbackAddDiv.Visible = true;
+
+        }
     }
 }

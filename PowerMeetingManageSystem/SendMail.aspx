@@ -1,15 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ManageMeeting.aspx.cs" Inherits="PowerMeetingManageSystem.ManageMeeting" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendMail.aspx.cs" Inherits="PowerMeetingManageSystem.SendMail" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>会议管理</title>
+    <title>发送邮件</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -31,43 +30,42 @@
     <div class="col-md-12 column">
         <div class="row clearfix">
             <div class="col-md-2 column"></div>
+
             <div class="col-md-6 column">
-                <form role="form" runat="server">
+                <form role="form" runat="server" class="form-horizontal">
 
-                    <div class="form-group" id="editForm">
-                        <label>会议名称:</label>
-                        <input class="form-control" id="name" runat="server" />
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">主题</label>
+                        <div class="col-sm-10">
+                            <asp:TextBox runat="server" ID="subject" class="form-control" placeholder="主题" />
+                        </div>
+
+
                     </div>
                     <div class="form-group">
-                        <label>会议主题:</label>
-                        <input class="form-control" id="sub" runat="server" />
+                        <label class="col-sm-2 control-label">正文</label>
+                        <div class="col-sm-10">
+                            <textarea runat="server" id="content" class="form-control" rows="10"></textarea>
+                        </div>
+
+
                     </div>
                     <div class="form-group">
-                        <label>会议时间:</label>
-                        <input class="form-control" id="time" runat="server" />
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <asp:Button CssClass="btn btn-default" runat="server" Text="发送" ID="sendButton" OnClick="sendButton_Click" />
+                            <asp:Button CssClass="btn btn-default" runat="server" Text="重置" ID="resetButton" OnClick="resetButton_Click" />
+                        </div>
+
                     </div>
+
                     <div class="form-group">
-                        <label>会议地点:</label>
-                        <input class="form-control" id="address" runat="server" />
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <asp:HyperLink class="btn btn-primary" ID="returnMeetingList" runat="server">返回</asp:HyperLink>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>主办方:</label>
-                        <input class="form-control" id="organization" runat="server" />
-                    </div>
-                    <div class="form-group" runat="server" id="add">
-
-                        <asp:Button type="submit" ID="addButton" runat="server" class="btn btn-default" Text="保存" OnClick="addButton_Click" />
-                        <asp:Button type="submit" ID="cancelButton1" runat="server" class="btn btn-default" Text="取消" OnClick="cancelButton1_Click" />
-                    </div>
-
-                    <div class="form-group" runat="server" id="edit">
-
-                        <asp:Button type="submit" ID="saveButton" runat="server" class="btn btn-default" Text="保存" OnClick="saveButton_Click" />
-                        <asp:Button type="submit" ID="cancelButton2" runat="server" class="btn btn-default" Text="取消" OnClick="cancelButton2_Click" />
-                    </div>
-
                 </form>
-
             </div>
 
 
@@ -77,5 +75,9 @@
     <div class="container">
         <div class="row clearfix"></div>
     </div>
+
+
 </body>
 </html>
+
+
