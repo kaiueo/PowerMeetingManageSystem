@@ -55,7 +55,6 @@
             this.serverNameTextBox.Name = "serverNameTextBox";
             this.serverNameTextBox.Size = new System.Drawing.Size(100, 21);
             this.serverNameTextBox.TabIndex = 1;
-            this.serverNameTextBox.Text = "DESKTOP-QUS258A\\SQLEXPRESS";
             // 
             // label2
             // 
@@ -72,7 +71,6 @@
             this.userTextBox.Name = "userTextBox";
             this.userTextBox.Size = new System.Drawing.Size(100, 21);
             this.userTextBox.TabIndex = 3;
-            this.userTextBox.Text = "sa";
             // 
             // label3
             // 
@@ -89,7 +87,6 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 21);
             this.passwordTextBox.TabIndex = 5;
-            this.passwordTextBox.Text = "sa";
             // 
             // loginButton
             // 
@@ -126,7 +123,6 @@
             this.databaseNameTextBox.Name = "databaseNameTextBox";
             this.databaseNameTextBox.Size = new System.Drawing.Size(100, 21);
             this.databaseNameTextBox.TabIndex = 9;
-            this.databaseNameTextBox.Text = "powermm";
             // 
             // LoginDatabse
             // 
