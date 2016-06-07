@@ -8,7 +8,7 @@
     <title>查看反馈结果</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 </head>
-<body>
+<body background ="imgs/background.jpg">
     <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>

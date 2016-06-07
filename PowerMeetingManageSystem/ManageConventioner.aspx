@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="lib/google-code-prettify/prettify.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body background ="imgs/background.jpg">
     <form id="form1" runat="server">
         <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
             <div class="navbar-header">

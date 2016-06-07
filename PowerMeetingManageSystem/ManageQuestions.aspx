@@ -8,7 +8,7 @@
     <title>反馈表管理</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 </head>
-<body>
+<body background ="imgs/background.jpg">
     <form id="form1" runat="server">
         <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
             <div class="navbar-header">

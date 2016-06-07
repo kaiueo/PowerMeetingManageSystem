@@ -107,6 +107,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\PowerMeetingManageSystem.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -233,6 +234,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="css\" />
     <Folder Include="fonts\" />
+    <Folder Include="imgs\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

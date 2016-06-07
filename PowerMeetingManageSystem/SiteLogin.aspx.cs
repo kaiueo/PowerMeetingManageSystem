@@ -43,8 +43,7 @@ namespace PowerMeetingManageSystem
             {
                 FormsAuthentication.SetAuthCookie(username, false);
                 String redirectionUrl = FormsAuthentication.GetRedirectUrl(username, false);
-                if (redirectionUrl.ToLower().IndexOf("login.aspx") > 0)
-                    redirectionUrl = "MeetingList.aspx";
+                redirectionUrl = "MeetingList.aspx";
                 Response.Redirect(redirectionUrl);
             }
         }

@@ -8,7 +8,7 @@
     <title>管理问题</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 </head>
-<body>
+<body background ="imgs/background.jpg">
 
     <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
   <div class="navbar-header">
