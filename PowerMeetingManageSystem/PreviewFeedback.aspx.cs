@@ -104,6 +104,10 @@ namespace PowerMeetingManageSystem
                     string questionId = result[5].ToString();
                     d1.Controls.Add(makeQuestion(num++.ToString() + "." + content, A, B, C, D, questionId, true));
                 }
+                HyperLink hp = new HyperLink();
+                hp.Text = "发送反馈表通知";
+                hp.NavigateUrl= "SendMail.aspx?id=" + meetingId + "&type=feedback";
+                d1.Controls.Add(hp);
 
             }
 

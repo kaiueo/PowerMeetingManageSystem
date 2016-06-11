@@ -112,20 +112,33 @@ namespace PowerMeetingManageSystem
 
         protected void saveButton_Click(object sender, EventArgs e)
         {
+            Vote();
+        }
+
+        private bool Vote()
+        {
             string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
             SqlCommand getQuestionIds = new SqlCommand();
             getQuestionIds.Connection = sqlConnection;
             getQuestionIds.CommandText = "select question_id from feedback where question_conf_id = " + meetingId;
-            SqlDataReader result = getQuestionIds.ExecuteReader();
-            while (result.Read())
+            try
             {
-                string questionId = result[0].ToString();
-                string choice = Request.Form[questionId];
-                makeIncress(questionId, choice);
+                SqlDataReader result = getQuestionIds.ExecuteReader();
+                while (result.Read())
+                {
+                    string questionId = result[0].ToString();
+                    string choice = Request.Form[questionId];
+                    makeIncress(questionId, choice);
+                }
+                Response.Write("<script>alert('提交成功!');window.location.href='FillFeedback.aspx?id=" + meetingId + "'</script>");
+                return true;
             }
-            Response.Write("<script>alert('提交成功!');window.location.href='FillFeedback.aspx?id=" + meetingId + "'</script>");
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         private void makeIncress(string questionId, string choice)

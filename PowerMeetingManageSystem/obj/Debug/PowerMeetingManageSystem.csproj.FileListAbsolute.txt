@@ -30,3 +30,4 @@ C:\Users\张克\Source\Repos\PowerMeetingManageSystem\PowerMeetingManageSystem\b
 C:\Users\张克\Source\Repos\PowerMeetingManageSystem\PowerMeetingManageSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\张克\Source\Repos\PowerMeetingManageSystem\PowerMeetingManageSystem\obj\Debug\PowerMeetingManageSystem.dll
 C:\Users\张克\Source\Repos\PowerMeetingManageSystem\PowerMeetingManageSystem\obj\Debug\PowerMeetingManageSystem.pdb
+C:\Users\张克\Source\Repos\PowerMeetingManageSystem\PowerMeetingManageSystem\obj\Debug\PowerMeetingManageSystem.csprojResolveAssemblyReference.cache

@@ -60,15 +60,7 @@ namespace PowerMeetingManageSystem
             {
                 if (meetingId != null)
                 {
-                    string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
-                    SqlConnection sqlConnection = new SqlConnection(connectionString);
-                    sqlConnection.Open();
-                    SqlCommand deleteMeeting = new SqlCommand();
-                    deleteMeeting.Connection = sqlConnection;
-                    deleteMeeting.CommandText = "delete from feedback where question_conf_id = @conf_id;delete from signform where sign_conf_id = @conf_id;delete from conference where conf_id = @conf_id;";
-                    deleteMeeting.Parameters.Add("@conf_id", SqlDbType.Int).Value = meetingId;
-                    deleteMeeting.ExecuteNonQuery();
-                    Response.Write("<script>alert('删除成功!');window.location.href='MeetingList.aspx'</script>");
+                    deleteConferenceByConfId(meetingId);
 
                 }
 
@@ -77,7 +69,36 @@ namespace PowerMeetingManageSystem
             
         }
 
+        private bool deleteConferenceByConfId(string meetingId)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            SqlCommand deleteMeeting = new SqlCommand();
+            deleteMeeting.Connection = sqlConnection;
+            deleteMeeting.CommandText = "delete from feedback where question_conf_id = @conf_id;delete from signform where sign_conf_id = @conf_id;delete from conference where conf_id = @conf_id;";
+            deleteMeeting.Parameters.Add("@conf_id", SqlDbType.Int).Value = meetingId;
+            try
+            {
+                deleteMeeting.ExecuteNonQuery();
+                Response.Write("<script>alert('删除成功!');window.location.href='MeetingList.aspx'</script>");
+                return true;
+            }
+            catch (Exception)
+            {
+                Response.Write("<script>alert('删除失败!');window.location.href='MeetingList.aspx'</script>");
+                return false;
+            }
+            
+        }
+
         protected void addButton_Click(object sender, EventArgs e)
+        {
+            insertConference();
+
+        }
+
+        private bool insertConference()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
             SqlConnection sqlConnection = new SqlConnection(connectionString);
@@ -100,12 +121,13 @@ namespace PowerMeetingManageSystem
                 addMeeting.ExecuteNonQuery();
                 Response.Write("<script>alert('添加成功!');window.location.href='MeetingList.aspx'</script>");
                 //Response.Redirect("MeetingList.aspx");
+                return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Response.Write("<script>alert('请检查输入是否正确。日期格式：xxxx-xx-xx xx:xx:xx')</script>");
+                return false;
             }
-
         }
 
         protected void cancelButton1_Click(object sender, EventArgs e)
@@ -114,6 +136,12 @@ namespace PowerMeetingManageSystem
         }
 
         protected void saveButton_Click(object sender, EventArgs e)
+        {
+            updateConference();
+
+        }
+
+        private bool updateConference()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["pmms"].ConnectionString.ToString();
             SqlConnection sqlConnection = new SqlConnection(connectionString);
@@ -138,15 +166,16 @@ namespace PowerMeetingManageSystem
             {
                 int a = updateMeeting.ExecuteNonQuery();
                 sqlConnection.Close();
-                Response.Write("<script>alert('修改成功!');window.location.href='MeetingHome.aspx?id="+meetingId+"'</script>");
+                Response.Write("<script>alert('修改成功!');window.location.href='MeetingHome.aspx?id=" + meetingId + "'</script>");
                 //Response.Redirect("MeetingHome.aspx?id=" + meetingId);
+                return true;
 
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('请检查输入是否正确。日期格式：xxxx-xx-xx xx:xx:xx')</script>");
+                return false;
             }
-
         }
 
         protected void cancelButton2_Click(object sender, EventArgs e)

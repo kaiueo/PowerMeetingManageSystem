@@ -45,6 +45,10 @@ namespace PowerMeetingManageSystem
                 String redirectionUrl = FormsAuthentication.GetRedirectUrl(username, false);
                 redirectionUrl = "MeetingList.aspx";
                 Response.Redirect(redirectionUrl);
+            }else
+            {
+                Response.Write("<script>alert('用户名或密码错误');</script>");
+
             }
         }
     }
